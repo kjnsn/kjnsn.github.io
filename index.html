@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kaley Main</title>
+    
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    
+  </head>
+  
+  <body>
+    <header>
+      
+      <div class="tint">
+        <h1>Kaley Main</h1>
+        <p>Awesome person</p>
+
+      </div>
+
+    </header>
+    
+  </body>
+  
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "http://rawgit.com/kjnsn/blog/master/atom.xml", true);
+    xmlhttp.send();
+    
+    xmlhttp.onloadend = function () {
+            
+      var posts = xmlhttp.responseXML.getElementsByTagName("entry");
+      for (var i = 0; i < posts.length; i++) {
+        var heading = document.createElement("h1");
+        heading.textContent = posts[i].getElementsByTagName("title")[0].textContent;
+        
+        var content = document.createElement("p");
+        content.innerHTML = posts[i].getElementsByTagName("content")[0].innerHTML;
+        
+        
+        var article = document.createElement("article");
+        article.appendChild(heading);
+        article.appendChild(content);
+        
+        
+        document.getElementsByTagName("body")[0].appendChild(article);
+      }
+      
+      
+    }
+    
+  </script>
+</html>

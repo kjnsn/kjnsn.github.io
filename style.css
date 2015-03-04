@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fefefe;
+}
+
+header {
+  background-image: url("background.jpeg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  height: 350px;
+  font-family: 'Helvetica Neue';
+  font-weight: 100;
+  font-size: 1.9rem;
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+  -moz-box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+
+.tint {
+  background: rgba(20, 20, 20, 0.6);
+  height: 100%;
+}
+
+header h1 {
+  margin-top: 0;
+  padding: 1em;
+  font-size: 3.5rem;
+  font-family: 'Helvetica Neue';
+  font-weight: 100;
+}
+
+article {
+  width: 80%;
+  padding: 3rem;
+  margin: 3rem auto;
+  line-height: 1.7rem;
+  background: white;
+  -webkit-box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  -moz-box-shadow:    0 1px 2px rgba(34, 25, 25, 0.4);
+  box-shadow:         0 1px 2px rgba(34, 25, 25, 0.4);
+}
